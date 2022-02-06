@@ -5,7 +5,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import one.digitalinnovation.personapi.enums.PhoneType;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -29,8 +28,6 @@ public class Phone {
     @Column(nullable = false)
     private PhoneType type;
 
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     private String number;
-
-
 }
